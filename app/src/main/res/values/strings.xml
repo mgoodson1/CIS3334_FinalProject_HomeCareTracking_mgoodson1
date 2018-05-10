@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Home Care Tracking</string>
+    <string name="welcome">Welcome to HomeCare Tracking</string>
+    <string name="main_directions">Select an existing Patient or Click Add New Patient</string>
+    <string name="spinnge_testing">Matt,Tom,Alex</string>
+    <string name="btnGoToAddPatient">Add Patient</string>
+    <string name="btnAddPatient">Add Patient</string>
+    <string name="btnReturnToMain">Return</string>
+    <string name="btnAddStats">Add Stats</string>
+
+    <string-array name="patients_array">
+        <item>Matt</item>
+        <item>Melissa</item>
+        <item>Ruby</item>
+        <item>Maggie</item>
+    </string-array>
+
 </resources>
