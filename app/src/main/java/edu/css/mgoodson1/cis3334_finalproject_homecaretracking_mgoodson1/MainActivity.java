@@ -14,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
         // cleanup for testing some initial data
         database.patientDao().removeAllPatients();
         // add some data
+        List<String> patientNames = database.patientDao().getAllPatientNames();
         List<Patient> patients = database.patientDao().getAllPatients();
-        if (patients.size() == 0) {
+        if (patientNames.size() == 0) {
             database.patientDao().addPatient(new Patient("Baby1", 1, 8));
             patient = database.patientDao().getAllPatients().get(0);
             Toast.makeText(this, String.valueOf(patient.id), Toast.LENGTH_SHORT).show();
@@ -52,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
         Spinner spinngerExistingPatients = (Spinner) findViewById(R.id.patients_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.patients_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                     android.R.layout.simple_spinner_item,database.patientDao().getAllPatientNames());
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
@@ -84,25 +86,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (view.getId() == R.id.btnAddStats) {
             openAddStats(view);
-            //openAddPatient(view);
         }
-
-
-
-            // TODO call updatefirstUserData
-        //Toast.makeText(this,String.valueOf(user.id), Toast.LENGTH_SHORT).show();
-        //Trophy trophy = new Trophy(user.id, "More stuff");
-        //database.trophyDao().addTrophy(trophy);
-
     }
-    //     if (view.getId()==R.id.increaseskills ){
-    //         user.skillPoints++;
-    //        database.userDao().updateUser(user);
-    //      // TODO to skillpoints
-//
-    //      }
-    //    // TODO call updatefirstUserData
-    //  updateFirstUserData();
 
 
     @Override

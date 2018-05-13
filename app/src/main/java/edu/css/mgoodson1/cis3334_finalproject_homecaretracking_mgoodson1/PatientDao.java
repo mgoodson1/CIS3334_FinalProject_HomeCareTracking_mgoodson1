@@ -6,6 +6,7 @@ import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -17,6 +18,10 @@ public interface PatientDao {
 
     @Query("select * from patient")
     public List<Patient> getAllPatients();
+
+    @Query("select name from patient")
+    public List<String> getAllPatientNames();
+
 
     @Query("select * from patient where id =:patientId")
     public List<Patient> getPatient(long patientId);

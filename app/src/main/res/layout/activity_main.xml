@@ -51,7 +51,7 @@
             android:layout_height="match_parent" >
 
             <Space
-                android:layout_width="50dp"
+                android:layout_width="25dp"
                 android:layout_height="wrap_content" />
 
             <Button
@@ -67,6 +67,14 @@
                 android:layout_height="94dp"
                 android:onClick="onClick"
                 android:text="@string/btnGoToAddPatient" />
+
+            <Button
+                android:id="@+id/btnModPatient"
+                android:layout_width="124dp"
+                android:layout_height="94dp"
+                android:onClick="onClick"
+                android:text="@string/btnModPatient" />
+
         </TableRow>
     </TableLayout>
 
