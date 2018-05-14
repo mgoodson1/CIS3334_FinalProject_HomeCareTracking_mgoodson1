@@ -24,7 +24,7 @@ public interface PatientDao {
 
 
     @Query("select * from patient where id =:patientId")
-    public List<Patient> getPatient(long patientId);
+    public Patient getPatient(long patientId);
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     void updatePatient(Patient patient);

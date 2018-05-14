@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         database = AppDatabase.getDatabase(getApplicationContext());
 
         // cleanup for testing some initial data
-        database.patientDao().removeAllPatients();
+        //database.patientDao().removeAllPatients();
         // add some data
         List<String> patientNames = database.patientDao().getAllPatientNames();
         List<Patient> patients = database.patientDao().getAllPatients();

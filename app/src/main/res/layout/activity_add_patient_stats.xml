@@ -7,12 +7,12 @@
     tools:context=".AddPatientStats">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvPatientName"
         android:layout_width="227dp"
         android:layout_height="54dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Patient: Display Patient Name Age and Weight"
+        android:text="NAME GOES HERE"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,10 +26,10 @@
         android:inputType="textPersonName"
         android:text="Enter Stat Date and Time:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPatientName" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/textStatTemp"
         android:layout_width="121dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/textStatDateTime"
         android:layout_width="124dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -48,7 +48,7 @@
         android:ems="10"
         android:inputType="date"
         app:layout_constraintStart_toEndOf="@+id/editText4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPatientName" />
 
     <EditText
         android:id="@+id/editText8"
@@ -85,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText8" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvDisplayStats"
         android:layout_width="281dp"
         android:layout_height="95dp"
         android:layout_marginStart="52dp"
